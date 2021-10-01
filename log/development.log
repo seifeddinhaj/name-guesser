@@ -1,0 +1,561 @@
+Started GET "/" for ::1 at 2021-09-30 15:46:32 +0100
+  
+PG::ConnectionBad (FATAL:  role "seif" does not exist
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1125:in `retrieve_connection'
+activerecord (6.0.4.1) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.4.1) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.4.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (103.1ms)[0m  [1m[35mCREATE DATABASE "name_guesser_development" ENCODING = 'unicode'[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE DATABASE "name_guesser_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2021-09-30 15:47:53 +0100
+Processing by Rails::WelcomeController#index as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "welcome"=>{"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat"}}
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 1165)
+
+
+  
+ActionController::UnknownFormat (Rails::WelcomeController#index is missing a template for this request format and variant.
+
+request.formats: ["application/json"]
+request.variant: []):
+  
+actionpack (6.0.4.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/name/guesser" for ::1 at 2021-09-30 15:50:23 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>{"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat"}}
+Completed 204 No Content in 2770ms (ActiveRecord: 0.0ms | Allocations: 61439)
+
+
+Started GET "/name/guesser" for ::1 at 2021-09-30 15:50:50 +0100
+  
+SyntaxError (/home/seif/CV/chalenge/The Name Guesser/name-guesser/app/controllers/names_controller.rb:6: syntax error, unexpected '{', expecting keyword_end
+        render :json {test: "ok"}
+                     ^
+/home/seif/CV/chalenge/The Name Guesser/name-guesser/app/controllers/names_controller.rb:6: syntax error, unexpected '}', expecting keyword_end
+...      render :json {test: "ok"}
+...                              ^):
+  
+app/controllers/names_controller.rb:6: syntax error, unexpected '{', expecting keyword_end
+app/controllers/names_controller.rb:6: syntax error, unexpected '}', expecting keyword_end
+app/controllers/names_controller.rb:6: syntax error, unexpected '{', expecting keyword_end
+app/controllers/names_controller.rb:6: syntax error, unexpected '}', expecting keyword_end
+Started GET "/name/guesser" for ::1 at 2021-09-30 15:52:10 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>{"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1793)
+
+
+Started GET "/name/guesser?name=%22rassas%22" for ::1 at 2021-09-30 15:52:28 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"\"rassas\""}
+Completed 200 OK in 3451ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 61726)
+
+
+Started GET "/name/guesser?name=%22rassas%22" for ::1 at 2021-09-30 15:52:52 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"\"rassas\""}
+Completed 200 OK in 3546ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 61554)
+
+
+Started GET "/name/guesser?name=%22rassas%22" for ::1 at 2021-09-30 15:53:06 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"\"rassas\""}
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms | Allocations: 70625)
+
+
+  
+NameError (undefined local variable or method `name' for #<NamesController:0x00007f9e5c510818>):
+  
+app/controllers/names_controller.rb:6:in `search'
+Started GET "/name/guesser?name=%22rassas%22" for ::1 at 2021-09-30 15:53:19 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"\"rassas\""}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:53:32 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:55:24 +0100
+  
+LoadError (cannot load such file -- HTTParty):
+  
+app/controllers/names_controller.rb:2:in `<class:NamesController>'
+app/controllers/names_controller.rb:1:in `<top (required)>'
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:55:38 +0100
+  
+LoadError (cannot load such file -- HTTParty):
+  
+app/controllers/names_controller.rb:2:in `<class:NamesController>'
+app/controllers/names_controller.rb:1:in `<top (required)>'
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:56:46 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1571)
+
+
+  
+NameError (uninitialized constant Net::HTTP):
+  
+app/controllers/names_controller.rb:8:in `search'
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:57:36 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 10941ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 62856)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:59:12 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 500 Internal Server Error in 493ms (ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+  
+NoMethodError (undefined method `empty?' for #<Net::HTTPOK 200 OK readbody=true>):
+  
+app/controllers/names_controller.rb:11:in `search'
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 15:59:38 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 500 Internal Server Error in 707ms (ActiveRecord: 0.0ms | Allocations: 1965)
+
+
+  
+NoMethodError (undefined method `empty?' for #<Net::HTTPOK 200 OK readbody=true>):
+  
+app/controllers/names_controller.rb:11:in `search'
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 16:00:07 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 658ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 16:07:46 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 544ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2498)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 16:07:59 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 620ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2488)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 16:09:08 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 1437ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2893)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-09-30 16:10:30 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 472341ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 103303)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-09-30 16:18:28 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 511067ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 24093)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-09-30 16:27:06 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 72123ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 77927)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-09-30 16:28:28 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 2295ms (ActiveRecord: 0.0ms | Allocations: 13560)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/names_controller.rb:15:in `block in search'
+app/controllers/names_controller.rb:15:in `select'
+app/controllers/names_controller.rb:15:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-09-30 16:29:38 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 24128540ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 71586)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:07:45 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 22437ms (ActiveRecord: 0.0ms | Allocations: 13701)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/names_controller.rb:17:in `block in search'
+app/controllers/names_controller.rb:16:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:08:37 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 1662ms (ActiveRecord: 0.0ms | Allocations: 3499)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/names_controller.rb:17:in `block in search'
+app/controllers/names_controller.rb:16:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:09:06 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 272291ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 144731)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:13:47 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 20017ms (ActiveRecord: 0.0ms | Allocations: 334)
+
+
+  
+SocketError (Failed to open TCP connection to www.familysearch.org:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/names_controller.rb:7:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:15:33 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 1185ms (ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/names_controller.rb:17:in `block in search'
+app/controllers/names_controller.rb:16:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:15:56 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 500 Internal Server Error in 953ms (ActiveRecord: 0.0ms | Allocations: 3398)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/names_controller.rb:17:in `block in search'
+app/controllers/names_controller.rb:16:in `search'
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:16:12 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 115582ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 15763)
+
+
+Started GET "/name/guesser?name=SMITH" for ::1 at 2021-10-01 15:18:12 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"SMITH"}
+Completed 200 OK in 13029ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 9637)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-10-01 15:18:34 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 4050ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 9583)
+
+
+Started GET "/name/guesser?name=rassas" for ::1 at 2021-10-01 15:19:33 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"rassas"}
+Completed 200 OK in 1006ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3116)
+
+
+Started GET "/name/guesser?name=mhedbi" for ::1 at 2021-10-01 15:19:50 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"mhedbi"}
+Completed 200 OK in 1005ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2344)
+
+
+Started GET "/name/guesser?name=wick" for ::1 at 2021-10-01 15:20:14 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"wick"}
+Completed 200 OK in 875ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2955)
+
+
+Started GET "/name/guesser?name=muller" for ::1 at 2021-10-01 15:20:28 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"muller"}
+Completed 200 OK in 899ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2928)
+
+
+Started GET "/name/guesser?name=pelegrini" for ::1 at 2021-10-01 15:20:41 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"pelegrini"}
+Completed 200 OK in 960ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2826)
+
+
+Started GET "/name/guesser?name=mohamed" for ::1 at 2021-10-01 15:20:52 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"mohamed"}
+Completed 200 OK in 873ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2826)
+
+
+Started GET "/name/guesser?name=mohammed" for ::1 at 2021-10-01 15:21:02 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"mohammed"}
+Completed 200 OK in 917ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2960)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:21:14 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 834ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2773)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:31:47 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 500 Internal Server Error in 1141ms (ActiveRecord: 0.0ms | Allocations: 73277)
+
+
+  
+NameError (undefined local variable or method `countires' for #<NamesController:0x00007fa2481d00c8>):
+  
+app/controllers/names_controller.rb:32:in `search'
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:32:18 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 500 Internal Server Error in 1107ms (ActiveRecord: 0.0ms | Allocations: 73258)
+
+
+  
+NameError (undefined local variable or method `countires' for #<NamesController:0x00007fa23a59ecd0>):
+  
+app/controllers/names_controller.rb:32:in `search'
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:32:49 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 500 Internal Server Error in 1068ms (ActiveRecord: 0.0ms | Allocations: 73187)
+
+
+  
+NameError (undefined local variable or method `countires' for #<NamesController:0x00005603720f9120>):
+  
+app/controllers/names_controller.rb:34:in `search'
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:33:34 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 1275ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2829)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:02 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 669ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2883)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:08 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 1281ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2759)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:11 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 800ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:14 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 454ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2809)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:16 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 518ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:29 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 500 Internal Server Error in 1158ms (ActiveRecord: 0.0ms | Allocations: 2777)
+
+
+  
+TypeError (String can't be coerced into Float):
+  
+app/controllers/names_controller.rb:29:in `+'
+app/controllers/names_controller.rb:29:in `search'
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:35:51 +0100
+  
+SyntaxError (/home/seif/CV/chalenge/The Name Guesser/name-guesser/app/controllers/names_controller.rb:29: syntax error, unexpected unary+, expecting '}'
+...res, time_processed:time.to_s +" s"}
+...                              ^
+/home/seif/CV/chalenge/The Name Guesser/name-guesser/app/controllers/names_controller.rb:29: syntax error, unexpected '}', expecting keyword_end
+...time_processed:time.to_s +" s"}
+...                              ^):
+  
+app/controllers/names_controller.rb:29: syntax error, unexpected unary+, expecting '}'
+app/controllers/names_controller.rb:29: syntax error, unexpected '}', expecting keyword_end
+app/controllers/names_controller.rb:29: syntax error, unexpected unary+, expecting '}'
+app/controllers/names_controller.rb:29: syntax error, unexpected '}', expecting keyword_end
+Started GET "/name/guesser?name=tamim" for ::1 at 2021-10-01 15:36:04 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"tamim"}
+Completed 200 OK in 976ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2822)
+
+
+Started GET "/name/guesser?name=jhon" for ::1 at 2021-10-01 15:36:29 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhon"}
+Completed 200 OK in 1113ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2959)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:36:38 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 1490ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2976)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:12 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 1065ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2869)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:14 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 997ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:16 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 813ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2910)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:18 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 518ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:20 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 823ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:38:21 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 479ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2853)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 15:39:35 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 986ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2875)
+
+
