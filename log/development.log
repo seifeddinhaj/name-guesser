@@ -559,3 +559,15 @@ Processing by NamesController#search as JSON
 Completed 200 OK in 986ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2875)
 
 
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 16:01:07 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 1126ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 13062)
+
+
+Started GET "/name/guesser?name=jhonson" for ::1 at 2021-10-01 16:01:10 +0100
+Processing by NamesController#search as JSON
+  Parameters: {"username"=>"seif1994@yahoo.fr", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:4200/login", "role"=>"candidat", "name"=>"jhonson"}
+Completed 200 OK in 903ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2942)
+
+
